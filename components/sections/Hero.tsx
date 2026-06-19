@@ -110,10 +110,11 @@ export default function Hero() {
       <div
         className="absolute bottom-0 left-0 right-0 z-20"
         style={{
-          background: 'rgba(26,26,46,0.55)',
+          background: 'linear-gradient(180deg, #252542 0%, #1a1a2e 55%, #111120 100%)',
           backdropFilter: 'blur(14px)',
           WebkitBackdropFilter: 'blur(14px)',
-          borderTop: '1px solid rgba(204,168,40,0.25)',
+          borderTop: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.06), 0 -1px 0 rgba(204,168,40,0.3)',
         }}
       >
         <div className="max-w-container mx-auto px-5 lg:px-[80px] py-5 grid grid-cols-2 md:grid-cols-4 gap-4">
