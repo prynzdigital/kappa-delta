@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       className="relative flex items-center justify-start bg-brand-dark overflow-hidden"
-      style={{ minHeight: 'min(100vh, 100svh)' }}
+      style={{ height: '100dvh', maxHeight: '100dvh' }}
       aria-label="Homepage hero"
     >
       {/* Background hero photo — shift focus to the right (people + dragon statue side) */}
@@ -46,7 +46,8 @@ export default function Hero() {
       />
 
       {/* Content — left column, max 46% on desktop so photo is fully visible on right */}
-      <div className="relative z-10 w-full max-w-container mx-auto px-6 lg:px-20 pt-24 pb-40 md:pt-36 md:pb-44">
+      {/* pt clears 72px fixed navbar; pb clears ~80px stats strip */}
+      <div className="relative z-10 w-full max-w-container mx-auto px-6 lg:px-20 pt-[88px] pb-[100px]">
         <div className="w-full max-w-[520px] lg:max-w-[46%]">
 
           {/* Frosted glass eyebrow pill */}
@@ -69,7 +70,7 @@ export default function Hero() {
           {/* H1 */}
           <h1
             className="font-display font-black text-white leading-[1.05] tracking-[-0.02em] mb-6"
-            style={{ fontSize: 'clamp(38px, 5.5vw, 64px)' }}
+            style={{ fontSize: 'clamp(32px, 4.5vw, 58px)' }}
           >
             Omega Psi Phi at UAB —{' '}
             <span className="text-primary">Where Brotherhood Began.</span>
