@@ -92,7 +92,10 @@ export default function EventsPreview() {
     if (trackRef.current) {
       const card = trackRef.current.children[clamped] as HTMLElement;
       if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        trackRef.current.scrollTo({
+          left: card.offsetLeft - trackRef.current.offsetLeft,
+          behavior: 'smooth',
+        });
       }
     }
   }, [TOTAL]);
@@ -150,15 +153,14 @@ export default function EventsPreview() {
 
       </div>
 
-      {/* Carousel track — 4 cards visible at a time */}
+      {/* Carousel track — 3 cards visible at a time */}
       <div
         ref={trackRef}
-        className="overflow-x-auto scrollbar-hide pb-2 max-w-container mx-auto px-5 lg:px-[80px]"
+        className="flex gap-4 overflow-x-auto scrollbar-hide pb-2 max-w-container mx-auto px-5 lg:px-[80px]"
         style={{ scrollSnapType: 'x mandatory' }}
         role="list"
         aria-label="Events carousel"
       >
-        <div className="flex gap-4">
         {MANDATED_EVENTS.map((event, i) => (
           <div
             key={event.id}
@@ -223,7 +225,6 @@ export default function EventsPreview() {
             </div>
           </div>
         ))}
-        </div>
       </div>
 
       {/* Dot indicators + CTA */}
