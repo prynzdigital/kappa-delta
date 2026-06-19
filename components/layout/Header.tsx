@@ -83,10 +83,17 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-brand-dark transition-shadow duration-200 ${
-        isScrolled ? 'shadow-nav' : ''
-      }`}
-      style={{ height: '72px' }}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        height: '72px',
+        background: 'rgba(26, 26, 46, 0.55)',
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        borderBottom: '1px solid rgba(204, 168, 40, 0.35)',
+        boxShadow: isScrolled
+          ? '0 1px 24px rgba(204, 168, 40, 0.18), 0 0 0 1px rgba(204, 168, 40, 0.12)'
+          : '0 1px 12px rgba(204, 168, 40, 0.10)',
+      }}
     >
       <div className="max-w-container mx-auto px-5 lg:px-[80px] h-full flex items-center justify-between">
         {/* Logo */}
@@ -160,9 +167,14 @@ export default function Header() {
         aria-modal="true"
         aria-label="Navigation menu"
         aria-hidden={!mobileOpen}
-        className={`md:hidden fixed inset-0 z-40 bg-brand-dark transition-opacity duration-200 ${
+        className={`md:hidden fixed inset-0 z-40 transition-opacity duration-200 ${
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
+        style={{
+          background: 'rgba(26, 26, 46, 0.92)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+        }}
         style={{ top: '60px' }}
       >
         <nav
