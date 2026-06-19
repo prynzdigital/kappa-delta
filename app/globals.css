@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', Georgia, serif;
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f5f0e8;
+    color: #1a1a2e;
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Global focus ring — design-system.md spec */
+  *:focus-visible {
+    outline: 3px solid #cca828;
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Skip nav — visually hidden until focused */
+  .skip-nav {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .skip-nav:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    clip: auto;
+    white-space: normal;
+    z-index: 9999;
+    background-color: #1a1a2e;
+    color: #f5f0e8;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    outline: 3px solid #cca828;
+    outline-offset: 2px;
+  }
+
+  /* Timeline vertical line */
+  .timeline-line {
+    position: relative;
+  }
+
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #cca828;
+    transform: translateX(-50%);
+  }
+
+  /* Line clamp utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Accordion transition */
+  .accordion-content {
+    overflow: hidden;
+    transition: max-height 200ms ease-out;
+  }
+
+  /* Archival photo filter */
+  .archival-photo {
+    filter: sepia(25%) contrast(1.1);
+    position: relative;
+  }
+
+  .archival-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(204, 168, 40, 0.1);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  /* Font family utilities */
+  .font-display {
+    font-family: var(--font-playfair);
+  }
+
+  .font-body {
+    font-family: var(--font-inter);
+  }
+
+  /* Eyebrow text style */
+  .text-eyebrow {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
