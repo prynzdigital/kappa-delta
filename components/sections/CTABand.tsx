@@ -117,7 +117,7 @@ export function AlumniCTABand() {
                       placeholder="Your full name"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full rounded-md px-4 py-2.5 text-sm font-body text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full rounded-md px-4 py-2.5 text-[16px] font-body text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
                       style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
                     />
                   </div>
@@ -133,7 +133,7 @@ export function AlumniCTABand() {
                       placeholder="your@email.com"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full rounded-md px-4 py-2.5 text-sm font-body text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full rounded-md px-4 py-2.5 text-[16px] font-body text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
                       style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
                     />
                   </div>
@@ -150,7 +150,7 @@ export function AlumniCTABand() {
                       placeholder="e.g. 2005"
                       value={form.year}
                       onChange={(e) => setForm({ ...form, year: e.target.value })}
-                      className="w-full rounded-md px-4 py-2.5 text-sm font-body text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full rounded-md px-4 py-2.5 text-[16px] font-body text-white placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-primary"
                       style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}
                     />
                   </div>

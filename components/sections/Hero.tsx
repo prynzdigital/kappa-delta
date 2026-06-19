@@ -69,29 +69,29 @@ export default function Hero() {
 
           {/* H1 */}
           <h1
-            className="font-display font-black text-white leading-[1.05] tracking-[-0.02em] mb-6"
-            style={{ fontSize: 'clamp(32px, 4.5vw, 58px)' }}
+            className="font-display font-black text-white leading-[1.05] tracking-[-0.02em] mb-4 md:mb-6"
+            style={{ fontSize: 'clamp(28px, 5vw, 58px)' }}
           >
             Omega Psi Phi at UAB —{' '}
             <span className="text-primary">Where Brotherhood Began.</span>
           </h1>
 
           {/* Subhead */}
-          <p className="font-body text-base md:text-lg text-white/85 mb-10 leading-[1.7] max-w-[440px]">
+          <p className="font-body text-sm md:text-lg text-white/85 mb-6 md:mb-10 leading-[1.7] max-w-[440px]">
             The Kappa Delta Chapter has shaped Black Greek life at UAB since 1971. The foundation is here. Your place in it starts now.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center min-h-[48px] px-7 rounded-md bg-primary text-brand-dark text-sm font-body font-bold tracking-[0.05em] uppercase transition-all duration-150 hover:bg-primary-hover active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="inline-flex items-center justify-center w-full sm:w-auto min-h-[48px] px-7 rounded-md bg-primary text-brand-dark text-sm font-body font-bold tracking-[0.05em] uppercase transition-all duration-150 hover:bg-primary-hover active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Express Interest
             </Link>
             <Link
               href="/events"
-              className="inline-flex items-center justify-center min-h-[48px] px-6 rounded-md border border-white/40 text-sm font-body font-semibold text-white hover:border-primary hover:text-primary transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="inline-flex items-center justify-center w-full sm:w-auto min-h-[48px] px-6 rounded-md border border-white/40 text-sm font-body font-semibold text-white hover:border-primary hover:text-primary transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Upcoming Events
             </Link>

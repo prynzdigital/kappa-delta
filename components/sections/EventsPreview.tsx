@@ -165,8 +165,8 @@ export default function EventsPreview() {
           <div
             key={event.id}
             role="listitem"
-            style={{ scrollSnapAlign: 'start', minWidth: 'calc(33.333% - 11px)', maxWidth: 'calc(33.333% - 11px)' }}
-            className="relative rounded-xl overflow-hidden flex-shrink-0 h-[520px] cursor-pointer group"
+            style={{ scrollSnapAlign: 'start' }}
+            className="relative rounded-xl overflow-hidden flex-shrink-0 w-[82vw] md:w-[calc(50%_-_8px)] lg:w-[calc(33.333%_-_11px)] h-[420px] md:h-[480px] lg:h-[520px] cursor-pointer group"
           >
             {/* Background image */}
             <Image
@@ -174,7 +174,7 @@ export default function EventsPreview() {
               alt={event.title}
               fill
               className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-500"
-              sizes="320px"
+              sizes="(max-width: 768px) 82vw, (max-width: 1024px) 50vw, 33vw"
             />
 
             {/* Base dark scrim so glass reads cleanly */}

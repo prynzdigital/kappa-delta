@@ -169,7 +169,11 @@ export default function BentoGallery() {
           {STATS.map((s, i) => (
             <div
               key={s.label}
-              className={`flex flex-col items-center justify-center text-center py-5 px-4 ${i < STATS.length - 1 ? 'border-r border-white/10' : ''}`}
+              className={`flex flex-col items-center justify-center text-center py-5 px-4 ${
+                // on mobile (2-col): border-r only on col 1 items (index 0 and 2)
+                // on md+ (4-col): border-r on all except last
+                i % 2 === 0 ? 'border-r border-white/10 md:border-r' : 'md:border-r md:border-white/10'
+              } ${i === STATS.length - 1 ? 'md:border-r-0' : ''}`}
             >
               <span className="font-display font-black text-primary text-3xl md:text-4xl leading-none">
                 {s.value}<span className="text-2xl">{s.suffix}</span>

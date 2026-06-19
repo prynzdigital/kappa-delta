@@ -61,7 +61,7 @@ export default function ValueProps() {
       <div className="max-w-container mx-auto px-5 lg:px-[80px]">
 
         {/* Section header — matches BentoGallery style */}
-        <div className="flex flex-col items-center text-center gap-3 mb-10">
+        <div className="flex flex-col items-center text-center gap-3 mb-8 md:mb-10">
           <div className="flex items-center gap-3">
             <span className="block h-px w-10 bg-brand-dark opacity-40" aria-hidden="true" />
             <span className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-brand-dark/60">
