@@ -46,7 +46,7 @@ export default function Hero() {
       />
 
       {/* Content — left column, max 46% on desktop so photo is fully visible on right */}
-      <div className="relative z-10 w-full max-w-container mx-auto px-6 lg:px-20 py-24 md:py-36">
+      <div className="relative z-10 w-full max-w-container mx-auto px-6 lg:px-20 pt-24 pb-40 md:pt-36 md:pb-44">
         <div className="w-full max-w-[520px] lg:max-w-[46%]">
 
           {/* Frosted glass eyebrow pill */}
@@ -102,6 +102,35 @@ export default function Hero() {
             </Link>
           </div>
 
+        </div>
+      </div>
+
+      {/* Frosted glass stats strip — anchored to bottom of hero */}
+      <div
+        className="absolute bottom-0 left-0 right-0 z-20"
+        style={{
+          background: 'rgba(26,26,46,0.55)',
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
+          borderTop: '1px solid rgba(204,168,40,0.25)',
+        }}
+      >
+        <div className="max-w-container mx-auto px-5 lg:px-[80px] py-5 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { value: '1971', label: 'Founded at UAB' },
+            { value: '8', label: 'Founding Members' },
+            { value: '54+', label: 'Years of Brotherhood' },
+            { value: '#1', label: 'First BGLO on Campus' },
+          ].map((s) => (
+            <div key={s.label} className="flex flex-col items-center text-center gap-0.5">
+              <span className="font-display font-black text-primary text-2xl md:text-3xl leading-none">
+                {s.value}
+              </span>
+              <span className="font-body text-[11px] text-white/60 uppercase tracking-widest leading-tight">
+                {s.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

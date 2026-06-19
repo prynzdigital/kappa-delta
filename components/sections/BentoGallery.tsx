@@ -84,8 +84,31 @@ const LABEL_STYLES: Record<string, string> = {
 
 export default function BentoGallery() {
   return (
-    <section className="bg-brand-dark py-10 md:py-14" aria-label="Chapter photo gallery">
+    <section className="bg-brand-dark py-10 md:py-16" aria-label="Chapter photo gallery">
       <div className="max-w-container mx-auto px-5 lg:px-[80px]">
+
+        {/* Section header */}
+        <div className="flex flex-col items-center text-center gap-3 mb-10">
+          {/* Eyebrow with decorative lines */}
+          <div className="flex items-center gap-3">
+            <span className="block h-px w-10 bg-primary opacity-70" aria-hidden="true" />
+            <span className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-primary">
+              Our Chapter
+            </span>
+            <span className="block h-px w-10 bg-primary opacity-70" aria-hidden="true" />
+          </div>
+          {/* Heading */}
+          <h2
+            className="font-display font-black text-white leading-tight"
+            style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
+          >
+            Brotherhood in{' '}
+            <span className="text-primary">Every Frame</span>
+          </h2>
+          <p className="font-body text-white/55 text-sm md:text-base max-w-md leading-relaxed">
+            From chapter walks to campus milestones — every photo is a chapter in the Kappa Delta story.
+          </p>
+        </div>
 
         {/* Bento Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-[auto] gap-3">
