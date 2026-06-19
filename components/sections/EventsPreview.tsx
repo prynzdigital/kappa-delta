@@ -108,13 +108,22 @@ export default function EventsPreview() {
       <div className="max-w-container mx-auto px-5 lg:px-[80px]">
 
         {/* Header row */}
-        <div className="flex items-end justify-between mb-10 gap-4">
-          <div>
-            <p className="text-eyebrow font-body text-primary tracking-[0.12em] uppercase mb-3">
-              National Mandated Programs
-            </p>
-            <h2 className="text-h2-mobile md:text-h2 font-display font-bold text-white leading-tight">
-              Upcoming Chapter Events
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+          {/* Styled header — matches Why Kappa / BentoGallery */}
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <span className="block h-px w-10 bg-primary opacity-70" aria-hidden="true" />
+              <span className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-primary">
+                National Mandated Programs
+              </span>
+              <span className="block h-px w-10 bg-primary opacity-70" aria-hidden="true" />
+            </div>
+            <h2
+              className="font-display font-black text-white leading-tight"
+              style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
+            >
+              Upcoming{' '}
+              <span className="text-primary">Chapter Events</span>
             </h2>
           </div>
 
