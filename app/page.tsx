@@ -7,7 +7,6 @@ import BentoGallery from '@/components/sections/BentoGallery';
 import ValueProps from '@/components/sections/ValueProps';
 import HistoryTeaser from '@/components/sections/HistoryTeaser';
 import EventsPreview from '@/components/sections/EventsPreview';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import { RecruitmentCTABand, AlumniCTABand } from '@/components/sections/CTABand';
 import JsonLd from '@/components/layout/JsonLd';
 import { buildWebPageSchema } from '@/lib/schema';
@@ -42,7 +41,6 @@ export default function HomePage() {
       <ValueProps />
       <HistoryTeaser />
       <EventsPreview />
-      <TestimonialsSection />
       <AlumniCTABand />
       <RecruitmentCTABand />
     </>

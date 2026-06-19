@@ -60,10 +60,23 @@ export default function ValueProps() {
     <section className="bg-surface py-16 md:py-24" aria-label="Why Kappa Delta">
       <div className="max-w-container mx-auto px-5 lg:px-[80px]">
 
-        {/* Eyebrow */}
-        <p className="text-eyebrow font-body text-brand-dark mb-4 text-center tracking-[0.12em] uppercase">
-          Why Kappa Delta
-        </p>
+        {/* Section header — matches BentoGallery style */}
+        <div className="flex flex-col items-center text-center gap-3 mb-10">
+          <div className="flex items-center gap-3">
+            <span className="block h-px w-10 bg-brand-dark opacity-40" aria-hidden="true" />
+            <span className="font-body text-[11px] font-semibold tracking-[0.2em] uppercase text-brand-dark/60">
+              Why Kappa Delta
+            </span>
+            <span className="block h-px w-10 bg-brand-dark opacity-40" aria-hidden="true" />
+          </div>
+          <h2
+            className="font-display font-black text-brand-dark leading-tight"
+            style={{ fontSize: 'clamp(28px, 4vw, 44px)' }}
+          >
+            The Brotherhood That{' '}
+            <span className="text-primary">Chose You First</span>
+          </h2>
+        </div>
 
         {/* Cards grid — 2 cols on md, 3 on lg */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -40,8 +40,7 @@ export function AlumniCTABand() {
 
   return (
     <section
-      className="py-16 md:py-24"
-      style={{ background: '#1c1917' }}
+      className="bg-brand-dark py-16 md:py-24"
       aria-label="Alumni reconnection"
     >
       <div className="max-w-container mx-auto px-5 lg:px-[80px]">
@@ -66,13 +65,13 @@ export function AlumniCTABand() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/network"
-                className="inline-flex items-center justify-center min-h-[44px] px-7 rounded-md bg-primary text-brand-dark text-sm font-body font-bold tracking-[0.04em] transition-all duration-150 hover:brightness-110 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1917]"
+                className="inline-flex items-center justify-center min-h-[44px] px-7 rounded-md bg-primary text-brand-dark text-sm font-body font-bold tracking-[0.04em] transition-all duration-150 hover:brightness-110 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
               >
                 Alumni Network
               </Link>
               <Link
                 href="/events"
-                className="inline-flex items-center justify-center min-h-[44px] px-7 rounded-md border border-white/30 text-sm font-body font-semibold text-white hover:border-primary hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1917]"
+                className="inline-flex items-center justify-center min-h-[44px] px-7 rounded-md border border-white/30 text-sm font-body font-semibold text-white hover:border-primary hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
               >
                 View Events
               </Link>
@@ -158,7 +157,7 @@ export function AlumniCTABand() {
 
                   <button
                     type="submit"
-                    className="mt-1 w-full inline-flex items-center justify-center min-h-[44px] px-7 rounded-md bg-primary text-brand-dark text-sm font-body font-bold tracking-[0.04em] transition-all duration-150 hover:brightness-110 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-[#1c1917]"
+                    className="mt-1 w-full inline-flex items-center justify-center min-h-[44px] px-7 rounded-md bg-primary text-brand-dark text-sm font-body font-bold tracking-[0.04em] transition-all duration-150 hover:brightness-110 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
                   >
                     Reconnect with the Chapter
                   </button>

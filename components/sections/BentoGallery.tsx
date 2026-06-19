@@ -151,20 +151,34 @@ export default function BentoGallery() {
             </div>
           ))}
 
-          {/* STATS CELL — spans full width on mobile, 1 col on md */}
-          <div className="col-span-2 md:col-span-1 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm p-4 flex items-center justify-around gap-2">
-            {STATS.map((s) => (
-              <div key={s.label} className="flex flex-col items-center text-center">
-                <span className="font-display font-black text-primary text-2xl leading-none">
-                  {s.value}<span className="text-lg">{s.suffix}</span>
-                </span>
-                <span className="font-body text-[10px] text-white/60 mt-1 leading-tight max-w-[56px]">
-                  {s.label}
-                </span>
-              </div>
-            ))}
-          </div>
+        </div>
+      </div>
 
+      {/* Full-width frosted stats bar — edge to edge */}
+      <div
+        className="w-full mt-6"
+        style={{
+          background: 'rgba(26,26,46,0.75)',
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
+          borderTop: '1px solid rgba(204,168,40,0.2)',
+          borderBottom: '1px solid rgba(204,168,40,0.2)',
+        }}
+      >
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {STATS.map((s, i) => (
+            <div
+              key={s.label}
+              className={`flex flex-col items-center justify-center text-center py-5 px-4 ${i < STATS.length - 1 ? 'border-r border-white/10' : ''}`}
+            >
+              <span className="font-display font-black text-primary text-3xl md:text-4xl leading-none">
+                {s.value}<span className="text-2xl">{s.suffix}</span>
+              </span>
+              <span className="font-body text-[11px] text-white/55 mt-1.5 uppercase tracking-widest leading-tight">
+                {s.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
