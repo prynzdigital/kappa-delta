@@ -171,11 +171,11 @@ export default function Header() {
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         style={{
+          top: '60px',
           background: 'rgba(26, 26, 46, 0.92)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
         }}
-        style={{ top: '60px' }}
       >
         <nav
           className="flex flex-col items-center justify-center h-full gap-6 pb-20"
