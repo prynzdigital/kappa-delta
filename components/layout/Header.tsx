@@ -86,7 +86,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         height: '72px',
-        background: 'linear-gradient(180deg, #232a6e 0%, #1a2060 40%, #131848 100%)',
+        background: 'linear-gradient(180deg, #252542 0%, #1a1a2e 55%, #111120 100%)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
         /* top gloss highlight */
