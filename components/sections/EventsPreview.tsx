@@ -163,8 +163,8 @@ export default function EventsPreview() {
           <div
             key={event.id}
             role="listitem"
-            style={{ scrollSnapAlign: 'start', minWidth: 'calc(25% - 12px)', maxWidth: 'calc(25% - 12px)' }}
-            className="relative rounded-xl overflow-hidden flex-shrink-0 h-[400px] cursor-pointer group"
+            style={{ scrollSnapAlign: 'start', minWidth: 'calc(33.333% - 11px)', maxWidth: 'calc(33.333% - 11px)' }}
+            className="relative rounded-xl overflow-hidden flex-shrink-0 h-[520px] cursor-pointer group"
           >
             {/* Background image */}
             <Image
