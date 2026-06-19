@@ -86,13 +86,15 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         height: '72px',
-        background: 'rgba(26, 26, 46, 0.55)',
-        backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(204, 168, 40, 0.35)',
+        background: 'linear-gradient(180deg, #232a6e 0%, #1a2060 40%, #131848 100%)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        /* top gloss highlight */
+        borderTop: '1px solid rgba(255,255,255,0.12)',
+        borderBottom: '1px solid rgba(204,168,40,0.5)',
         boxShadow: isScrolled
-          ? '0 1px 24px rgba(204, 168, 40, 0.18), 0 0 0 1px rgba(204, 168, 40, 0.12)'
-          : '0 1px 12px rgba(204, 168, 40, 0.10)',
+          ? '0 4px 32px rgba(204,168,40,0.22), inset 0 1px 0 rgba(255,255,255,0.08)'
+          : '0 2px 16px rgba(204,168,40,0.14), inset 0 1px 0 rgba(255,255,255,0.08)',
       }}
     >
       <div className="max-w-container mx-auto px-5 lg:px-[80px] h-full flex items-center justify-between">
@@ -108,7 +110,11 @@ export default function Header() {
             width={120}
             height={48}
             priority
-            style={{ height: '48px', width: 'auto' }}
+            style={{
+              height: '48px',
+              width: 'auto',
+              filter: 'brightness(1.18) drop-shadow(0 1px 6px rgba(255,255,255,0.25)) drop-shadow(0 0 12px rgba(204,168,40,0.2))',
+            }}
           />
         </Link>
 
