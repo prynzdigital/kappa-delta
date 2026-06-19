@@ -150,20 +150,21 @@ export default function EventsPreview() {
 
       </div>
 
-      {/* Carousel track — bleeds to edge */}
+      {/* Carousel track — 4 cards visible at a time */}
       <div
         ref={trackRef}
-        className="flex gap-5 overflow-x-auto scrollbar-hide pl-5 lg:pl-[max(80px,calc((100vw-1280px)/2+80px))] pr-5 pb-2"
+        className="overflow-x-auto scrollbar-hide pb-2 max-w-container mx-auto px-5 lg:px-[80px]"
         style={{ scrollSnapType: 'x mandatory' }}
         role="list"
         aria-label="Events carousel"
       >
+        <div className="flex gap-4">
         {MANDATED_EVENTS.map((event, i) => (
           <div
             key={event.id}
             role="listitem"
-            style={{ scrollSnapAlign: 'start', minWidth: '300px', maxWidth: '320px' }}
-            className="relative rounded-xl overflow-hidden flex-shrink-0 h-[440px] cursor-pointer group"
+            style={{ scrollSnapAlign: 'start', minWidth: 'calc(25% - 12px)', maxWidth: 'calc(25% - 12px)' }}
+            className="relative rounded-xl overflow-hidden flex-shrink-0 h-[400px] cursor-pointer group"
           >
             {/* Background image */}
             <Image
@@ -222,6 +223,7 @@ export default function EventsPreview() {
             </div>
           </div>
         ))}
+        </div>
       </div>
 
       {/* Dot indicators + CTA */}
