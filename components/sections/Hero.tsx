@@ -49,10 +49,22 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-container mx-auto px-6 lg:px-20 py-24 md:py-36">
         <div className="w-full max-w-[520px] lg:max-w-[46%]">
 
-          {/* Eyebrow */}
-          <p className="font-body text-sm font-semibold tracking-[0.12em] uppercase text-primary mb-5">
-            Kappa Delta Chapter · Founded 1971
-          </p>
+          {/* Frosted glass eyebrow pill */}
+          <div className="inline-flex items-center mb-5">
+            <span
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-body font-semibold tracking-[0.12em] uppercase text-primary"
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(204, 168, 40, 0.45)',
+                boxShadow: '0 2px 12px rgba(204, 168, 40, 0.12)',
+              }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block shrink-0" aria-hidden="true" />
+              Kappa Delta Chapter · Founded 1971
+            </span>
+          </div>
 
           {/* H1 */}
           <h1

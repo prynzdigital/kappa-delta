@@ -3,6 +3,7 @@
 
 import type { Metadata } from 'next';
 import Hero from '@/components/sections/Hero';
+import BentoGallery from '@/components/sections/BentoGallery';
 import ValueProps from '@/components/sections/ValueProps';
 import HistoryTeaser from '@/components/sections/HistoryTeaser';
 import EventsPreview from '@/components/sections/EventsPreview';
@@ -37,6 +38,7 @@ export default function HomePage() {
     <>
       <JsonLd data={webPageSchema} />
       <Hero />
+      <BentoGallery />
       <ValueProps />
       <HistoryTeaser />
       <EventsPreview />
