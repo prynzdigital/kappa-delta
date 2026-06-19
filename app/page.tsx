@@ -43,8 +43,8 @@ export default function HomePage() {
       <HistoryTeaser />
       <EventsPreview />
       <TestimonialsSection />
-      <RecruitmentCTABand />
       <AlumniCTABand />
+      <RecruitmentCTABand />
     </>
   );
 }
