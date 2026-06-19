@@ -1,29 +1,57 @@
 // components/sections/ValueProps.tsx
-// Homepage Value Props — 3 image cards with brand-dark shadow.
+// Homepage Value Props — 6 image cards, minimal copy + CTA each.
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const VALUE_PROPS = [
   {
     id: 'vp-first',
     image: '/images/first.png',
-    imageAlt: 'Kappa Delta Chapter — the first Black Greek-letter organization founded and chartered at UAB',
+    imageAlt: 'The first BGLO founded and chartered at UAB',
     headline: 'The First — and Still Standing',
-    body: "No other fraternity can say it: Kappa Delta Chapter was the first Black Greek-letter organization both founded and chartered at UAB. That distinction was earned in 1971 and it has never changed. When you join Kappa Delta, you join the organization that opened the door for every BGLO that followed.",
+    body: 'Founded and chartered at UAB in 1971 — no other fraternity can claim that distinction.',
+    cta: { label: 'Our History', href: '/about' },
   },
   {
     id: 'vp-brotherhood',
     image: '/images/brotherhood.png',
-    imageAlt: 'Brotherhood of Kappa Delta Chapter spanning generations of UAB alumni',
+    imageAlt: 'Brothers of Kappa Delta Chapter at UAB',
     headline: 'Brotherhood That Spans Generations',
-    body: "Our initiated members aren't just fellow students — they become lifelong brothers. Kappa Delta alumni have gone on to serve as UAB student government president, lead careers in medicine, law, business, and public service, and remain connected through a living network that spans more than five decades.",
+    body: 'From student leaders to doctors, lawyers, and executives — our bonds last a lifetime.',
+    cta: { label: 'Meet the Brothers', href: '/lines' },
   },
   {
     id: 'vp-legacy',
     image: '/images/legacy.png',
-    imageAlt: 'Kappa Delta Chapter legacy — campus monument near the historic Ullman West Building at UAB',
+    imageAlt: 'Kappa Delta Chapter campus monument at UAB',
     headline: 'A Legacy You Can Stand On',
-    body: "Most fraternities talk about legacy. Kappa Delta Chapter has a monument to prove it — permanently installed on the UAB campus near the historic Ullman West Building. We are not a footnote in UAB history. We are part of its foundation.",
+    body: 'We have a monument on campus to prove it. Not a footnote — a foundation.',
+    cta: { label: 'See Our Legacy', href: '/about' },
+  },
+  {
+    id: 'vp-service',
+    image: '/images/hero-image.png',
+    imageAlt: 'Chapter members serving the community',
+    headline: 'Service Above Self',
+    body: 'Six National Mandated Programs guide every chapter initiative — from scholarship to community uplift.',
+    cta: { label: 'Our Programs', href: '/events' },
+  },
+  {
+    id: 'vp-scholarship',
+    image: '/images/hero1.png',
+    imageAlt: 'Kappa Delta scholars at UAB',
+    headline: 'Excellence in Scholarship',
+    body: 'We hold our men to a higher standard — academically, professionally, and personally.',
+    cta: { label: 'Get Involved', href: '/contact' },
+  },
+  {
+    id: 'vp-network',
+    image: '/images/hero.png',
+    imageAlt: 'Kappa Delta alumni network',
+    headline: 'A Network That Opens Doors',
+    body: 'Kappa Delta alumni are in every industry. Your next mentor, partner, or employer may already be a brother.',
+    cta: { label: 'Alumni Network', href: '/network' },
   },
 ];
 
@@ -37,34 +65,40 @@ export default function ValueProps() {
           Why Kappa Delta
         </p>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
+        {/* Cards grid — 2 cols on md, 3 on lg */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {VALUE_PROPS.map((vp) => (
             <div
               key={vp.id}
               className="group bg-surface-alt rounded-lg overflow-hidden shadow-card-brand hover:shadow-card-brand-hover transition-shadow duration-300 flex flex-col"
             >
-              {/* Image area */}
-              <div className="relative h-52 w-full overflow-hidden">
+              {/* Image */}
+              <div className="relative h-44 w-full overflow-hidden">
                 <Image
                   src={vp.image}
                   alt={vp.imageAlt}
                   fill
                   className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                {/* Gold bottom accent bar */}
                 <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary z-10" aria-hidden="true" />
               </div>
 
-              {/* Text content */}
-              <div className="flex flex-col gap-3 p-7 flex-1">
-                <h2 className="text-h3-mobile md:text-h4 font-display font-bold text-brand-dark leading-snug">
+              {/* Content */}
+              <div className="flex flex-col gap-2.5 p-5 flex-1">
+                <h2 className="font-display font-bold text-brand-dark text-[17px] leading-snug">
                   {vp.headline}
                 </h2>
-                <p className="text-body font-body text-text-muted leading-[1.65]">
+                <p className="font-body text-sm text-text-muted leading-[1.6] flex-1">
                   {vp.body}
                 </p>
+                <Link
+                  href={vp.cta.href}
+                  className="mt-1 inline-flex items-center gap-1 text-sm font-body font-semibold text-primary hover:text-primary-hover transition-colors duration-150 focus-visible:outline-none focus-visible:underline"
+                >
+                  {vp.cta.label}
+                  <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </div>
           ))}
