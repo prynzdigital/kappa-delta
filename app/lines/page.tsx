@@ -79,14 +79,6 @@ export default function LinesPage() {
             ))}
           </div>
 
-          {/* Data notice */}
-          {/* TODO: [NEEDS CLIENT INPUT] — Replace placeholder entries with complete line data
-              migrated from https://kdques.wordpress.com or supplied directly by the chapter. */}
-          <div className="mt-8 bg-surface-mid border border-border rounded-md p-4 text-body-sm text-text-muted italic">
-            [NEEDS CLIENT INPUT: Complete line entries — line name, semester/year, member names or initials,
-            and optional notable context for each line. Data to be migrated from the existing WordPress site
-            or supplied directly by chapter officers.]
-          </div>
         </div>
       </section>
 
