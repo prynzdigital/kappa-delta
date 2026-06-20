@@ -101,12 +101,7 @@ export default function LinesPage() {
         <div className="pointer-events-none absolute bottom-[8%] right-[20%] w-96 h-96 rounded-full bg-cyan-400/10   blur-3xl" aria-hidden="true" />
 
         <div className="relative max-w-container mx-auto px-5 lg:px-[80px]">
-          {/* Desktop center spine */}
-          <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px bg-primary/30 hidden md:block" aria-hidden="true" />
-          {/* Mobile left spine */}
-          <div className="pointer-events-none absolute inset-y-0 left-[37px] w-px bg-primary/30 md:hidden" aria-hidden="true" />
-
-          <div className="flex flex-col gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {LINES.map((line, index) => (
               <CardLineEntry key={line.id} line={line} index={index} />
             ))}
