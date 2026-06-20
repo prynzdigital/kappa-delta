@@ -70,15 +70,34 @@ export default function LinesPage() {
       {/* TODO: [NEEDS CLIENT INPUT] — Full line count needed to determine if decade-based index
           is appropriate (shown only if 15+ total lines). Currently hidden since full data is pending. */}
 
-      {/* Lines List */}
-      <section className="bg-surface py-8 pb-24" aria-label="Kappa Delta Chapter pledge class records">
+      {/* Stats strip */}
+      <section className="bg-brand-dark py-10" aria-label="Chapter lines at a glance">
         <div className="max-w-container mx-auto px-5 lg:px-[80px]">
-          <div className="flex flex-col gap-6">
-            {LINES.map((line) => (
-              <CardLineEntry key={line.id} line={line} />
+          <dl className="grid grid-cols-3 gap-4 text-center">
+            <div className="flex flex-col gap-1">
+              <dt className="text-eyebrow text-primary tracking-widest">Lines</dt>
+              <dd className="text-h1-mobile md:text-h1 font-display font-bold text-text-on-dark">33</dd>
+            </div>
+            <div className="flex flex-col gap-1">
+              <dt className="text-eyebrow text-primary tracking-widest">Brothers</dt>
+              <dd className="text-h1-mobile md:text-h1 font-display font-bold text-text-on-dark">140+</dd>
+            </div>
+            <div className="flex flex-col gap-1">
+              <dt className="text-eyebrow text-primary tracking-widest">Years Active</dt>
+              <dd className="text-h1-mobile md:text-h1 font-display font-bold text-text-on-dark">54</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      {/* Lines List */}
+      <section className="bg-surface py-16 pb-24" aria-label="Kappa Delta Chapter pledge class records">
+        <div className="max-w-container mx-auto px-5 lg:px-[80px]">
+          <div className="flex flex-col gap-5">
+            {LINES.map((line, index) => (
+              <CardLineEntry key={line.id} line={line} index={index} />
             ))}
           </div>
-
         </div>
       </section>
 

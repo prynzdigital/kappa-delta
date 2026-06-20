@@ -1,59 +1,54 @@
 // components/ui/CardLineEntry.tsx
-// Card/LineEntry component — per design-system.md §5.
-// 4px gold left border, used on /lines page.
-
 import type { LineEntry } from '@/lib/constants';
 
 interface CardLineEntryProps {
   line: LineEntry;
+  index: number;
 }
 
-export default function CardLineEntry({ line }: CardLineEntryProps) {
+export default function CardLineEntry({ line, index }: CardLineEntryProps) {
   return (
     <article
-      className="bg-surface-alt rounded-md shadow-card hover:shadow-card-hover transition-shadow duration-200 border-l-4 border-primary overflow-hidden"
-      aria-label={`Line: ${line.lineName}, ${line.semester}`}
+      className="rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-200"
+      aria-label={`Line ${index + 1}: ${line.lineName}, ${line.semester}`}
     >
-      <div className="p-6 flex flex-col gap-3">
-        {/* Line name */}
-        <h3 className="text-h3-mobile md:text-h3 font-display font-bold text-text leading-snug">
-          {line.lineName}
-        </h3>
-
-        {/* Metadata */}
-        <div className="flex items-center gap-3 text-label font-body font-medium text-text-muted flex-wrap">
-          <span>{line.semester}</span>
-          {line.memberCount > 0 && (
-            <>
-              <span aria-hidden="true">·</span>
-              <span>{line.memberCount} {line.memberCount === 1 ? 'Member' : 'Members'}</span>
-            </>
-          )}
+      {/* Dark header */}
+      <div className="bg-brand-dark px-6 py-5 flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <p className="text-eyebrow text-primary mb-2 tracking-widest">{line.semester}</p>
+          <h3 className="text-h3-mobile md:text-h3 font-display font-bold text-text-on-dark leading-snug">
+            &ldquo;{line.lineName}&rdquo;
+          </h3>
         </div>
-
-        {/* Member list */}
-        {line.members.length > 0 && (
-          <ul
-            className="text-body-sm text-text leading-relaxed"
-            aria-label={`Members of ${line.lineName}`}
+        {line.memberCount > 0 && (
+          <div
+            className="shrink-0 w-11 h-11 rounded-full bg-primary flex items-center justify-center text-h4 font-display font-bold text-text-on-gold mt-1"
+            aria-label={`${line.memberCount} ${line.memberCount === 1 ? 'member' : 'members'}`}
           >
-            {line.members.map((member, idx) => (
-              <li key={idx} className="inline">
-                {member}
-                {idx < line.members.length - 1 && (
-                  <span className="text-text-muted mx-1" aria-hidden="true">·</span>
-                )}
-              </li>
-            ))}
-          </ul>
+            {line.memberCount}
+          </div>
         )}
+      </div>
 
-        {/* Narrative / notable context */}
+      {/* White body */}
+      <div className="bg-surface-alt px-6 py-5">
         {line.narrative && (
-          <p className="text-body text-text-muted italic mt-1 leading-relaxed">
-            &ldquo;{line.narrative}&rdquo;
+          <p className="text-body-sm text-text-muted italic mb-4 leading-relaxed border-l-2 border-primary pl-3">
+            {line.narrative}
           </p>
         )}
+        <ul
+          className="flex flex-wrap gap-2"
+          aria-label={`Members of ${line.lineName}`}
+        >
+          {line.members.map((member, idx) => (
+            <li key={idx}>
+              <span className="inline-flex items-center px-3 py-1 rounded-full bg-surface border border-border text-body-sm font-body text-text">
+                {member}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </article>
   );
