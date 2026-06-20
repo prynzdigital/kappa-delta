@@ -90,15 +90,15 @@ export default function LinesPage() {
         </div>
       </section>
 
-      {/* Lines List — frosted glass timeline */}
-      <section className="relative bg-brand-dark overflow-hidden py-16 pb-24" aria-label="Kappa Delta Chapter pledge class records">
-        {/* Decorative color blobs — blurred behind frosted cards */}
-        <div className="pointer-events-none absolute top-[5%]   left-[8%]  w-80 h-80 rounded-full bg-amber-400/20   blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute top-[18%]  right-[6%] w-96 h-96 rounded-full bg-pink-500/15    blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute top-[38%]  left-[15%] w-72 h-72 rounded-full bg-violet-600/15  blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute top-[55%]  right-[10%] w-80 h-80 rounded-full bg-teal-500/15   blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute top-[72%]  left-[5%]  w-64 h-64 rounded-full bg-orange-500/15  blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute bottom-[8%] right-[20%] w-96 h-96 rounded-full bg-cyan-400/10   blur-3xl" aria-hidden="true" />
+      {/* Lines List */}
+      <section className="relative bg-surface overflow-hidden py-16 pb-24" aria-label="Kappa Delta Chapter pledge class records">
+        {/* Subtle decorative blobs */}
+        <div className="pointer-events-none absolute top-[5%]   left-[8%]  w-80 h-80 rounded-full bg-amber-400/10  blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute top-[18%]  right-[6%] w-96 h-96 rounded-full bg-pink-500/8    blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute top-[38%]  left-[15%] w-72 h-72 rounded-full bg-violet-600/8  blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute top-[55%]  right-[10%] w-80 h-80 rounded-full bg-teal-500/8   blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute top-[72%]  left-[5%]  w-64 h-64 rounded-full bg-orange-500/8  blur-3xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute bottom-[8%] right-[20%] w-96 h-96 rounded-full bg-cyan-400/8   blur-3xl" aria-hidden="true" />
 
         <div className="relative max-w-container mx-auto px-5 lg:px-[80px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
